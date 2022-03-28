@@ -13,9 +13,14 @@ const StudiosContainer = () => {
   useEffect(() => {
       fetchData()
   }, [])
+
+  const handleDeleteStudio = (id) => {
+    const updatedStudios = studios.filter((studio) => studio.id !== id);
+    setStudios(updatedStudios);
+  }
   return (
     <div>
-      <StudioList studios={studios}/>
+      <StudioList studios={studios} handleDeleteStudio={handleDeleteStudio}/>
     </div>
   )
 }
