@@ -12,13 +12,30 @@ import StudiosContainer from '../containers/StudiosContainer'
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <Router>
+        <Navbar />
         <Switch>
+
+          <Route path ="/animes">
+            <AnimesContainer /> 
+          </Route>
+
+          <Route path ="/animes/new">
+            <AnimeForm /> 
+          </Route>
+
+          <Route path ="/studios">
+            <StudiosContainer /> 
+          </Route>
+
+          <Route path = "/studios/new">
+            <StudioForm />
+          </Route>
           
           <Route path ="/">
             <Home /> 
           </Route>
+          
         </Switch>
       </Router>
       
