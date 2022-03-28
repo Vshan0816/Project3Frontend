@@ -18,9 +18,7 @@ function App() {
         <Navbar />
         <Switch>
 
-          <Route path ="/animes">
-            <AnimesContainer /> 
-          </Route>
+         
 
           <Route path ="/animes/new">
             <AnimeForm /> 
@@ -30,9 +28,11 @@ function App() {
             <AnimeCard />
           </Route>
 
-          <Route path ="/studios">
-            <StudiosContainer /> 
+          <Route path ="/animes">
+            <AnimesContainer /> 
           </Route>
+
+          
 
           <Route path = "/studios/new">
             <StudioForm />
@@ -40,6 +40,10 @@ function App() {
 
           <Route path="/studios/:id">
             <StudioCard />
+          </Route>
+
+          <Route path ="/studios">
+            <StudiosContainer /> 
           </Route>
           
           <Route path ="/">
