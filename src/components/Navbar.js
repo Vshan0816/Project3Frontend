@@ -12,7 +12,53 @@ const style = {
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <div>
+        <NavLink
+            activeStyle={{
+                fontWeight: "bolder",
+                color: "red"
+            }}
+                exact style = {style}
+                to ="/">
+                Home
+            </NavLink>
+            <NavLink
+            activeStyle={{
+                fontWeight: "bolder",
+                color: "red"
+            }}
+                exact style = {style}
+                to ="/animes">
+                Animes
+            </NavLink>
+            <NavLink
+            activeStyle={{
+                fontWeight: "bolder",
+                color: "red"
+            }}
+                exact style = {style}
+                to ="/animes/new">
+                New Anime
+            </NavLink>
+            <NavLink
+            activeStyle={{
+                fontWeight: "bolder",
+                color: "red"
+            }}
+                exact style = {style}
+                to ="/studios">
+                Animation Studios
+            </NavLink>
+            <NavLink
+            activeStyle={{
+                fontWeight: "bolder",
+                color: "red"
+            }}
+                exact style = {style}
+                to ="/studios/new">
+                New Studio
+            </NavLink>
+    </div>
   )
 }
 
