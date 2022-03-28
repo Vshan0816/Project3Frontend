@@ -7,6 +7,8 @@ import AnimeForm from './AnimeForm'
 import Home from './Home'
 import AnimesContainer from '../containers/AnimesContainer'
 import StudiosContainer from '../containers/StudiosContainer'
+import AnimeCard from './AnimeCard'
+import StudioCard from './StudioCard'
 
 
 function App() {
@@ -24,12 +26,20 @@ function App() {
             <AnimeForm /> 
           </Route>
 
+          <Route path="/animes/:id">
+            <AnimeCard />
+          </Route>
+
           <Route path ="/studios">
             <StudiosContainer /> 
           </Route>
 
           <Route path = "/studios/new">
             <StudioForm />
+          </Route>
+
+          <Route path="/studios/:id">
+            <StudioCard />
           </Route>
           
           <Route path ="/">
