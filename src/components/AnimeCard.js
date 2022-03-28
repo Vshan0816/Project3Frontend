@@ -16,7 +16,7 @@ const AnimeCard = ({anime}) => {
     if (!finalAnime) return <h1>Loading...</h1>
   return (
     <div style={{border:"solid", width: "17 %", height:"25%", margin:"auto"}}>
-      <h3>Title: <Link to={`/animes/${finalAnime.id}`}>{finalAnime.title}</Link></h3>
+      <h2>Title: <Link to={`/animes/${finalAnime.id}`}>{finalAnime.title}</Link></h2>
       <img src = {finalAnime.image_url} alt={finalAnime.title} />
       <h2>Synopsis</h2>
       <p>{finalAnime.synopsis}</p>

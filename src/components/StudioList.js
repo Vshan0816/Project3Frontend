@@ -7,7 +7,7 @@ const StudioList = ({studios}) => {
 })
   return (
     <div>
-       <h2>Studios</h2>
+       <h1>Studios</h1>
             <div style ={{display: "flex", flexWrap: "wrap"}}> 
                 {StudiosCard}
             </div>

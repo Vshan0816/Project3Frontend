@@ -7,7 +7,7 @@ const AnimeList = ({animes}) => {
 })
   return (
     <div>
-      <h2>Animes</h2>
+      <h1>Animes</h1>
             <div style ={{display: "flex", flexWrap: "wrap"}}> 
                 {AnimesCard}
             </div>
