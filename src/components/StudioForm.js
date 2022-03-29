@@ -5,7 +5,7 @@ const StudioForm = () => {
 
   const [studio, setStudio] = useState({
     name: "",
-    year_founded: ""
+    year_founded: null
 });
 const history = useHistory()
 
@@ -41,7 +41,7 @@ fetch("http://localhost:9393/studios", {
          <label htmlFor="name">Name</label>
          <input onChange={handleChange} type="text" name="name" value={studio.name} required/><br />
          <label htmlFor="year_founded">Year Founded</label>
-         <input onChange={handleChange} type="text" name="year_founded" value={studio.year_founded}/><br />
+         <input onChange={handleChange} type="integer" name="year_founded" value={studio.year_founded}/><br />
          <input type="submit" value="Create Studio" />
       </form>
 

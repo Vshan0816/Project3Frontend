@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react"
 import {Link, useParams} from "react-router-dom"
 
+
 const AnimeCard = ({anime}) => {
   const {id} = useParams()
   const [animeObj, setAnimeObj] = useState(null);

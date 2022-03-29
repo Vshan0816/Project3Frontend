@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import {useHistory} from "react-router-dom"
 
 const AnimeForm = () => {
   const [studios, setStudios] = useState([])
@@ -19,7 +20,7 @@ const AnimeForm = () => {
     release_year: "",
     total_seasons: "",
     image_url: "",
-    studio_id: ""
+    studio: ""
 });
 const history = useHistory()
 
@@ -38,7 +39,7 @@ const handleSubmit = e => {
     release_year: anime.release_year,
     total_seasons: anime.total_seasons,
     image_url: anime.image_url,
-    studio_id: anime.studio_id
+    studio: anime.studio
 }
 
 fetch("http://localhost:9393/animes", {
@@ -50,8 +51,39 @@ fetch("http://localhost:9393/animes", {
 })
 .then(() => history.push("/animes"))
 }
+
+const StudiosMap = studios.map(studio => {
+  return <option value={anime.studio} name = "studio">{studio.name}</option>
+}) 
+
   return (
-    <div>AnimeForm</div>
+    <>
+      <h3>Create a Anime</h3>
+      <form onSubmit={handleSubmit}>
+         <label htmlFor="title">Title</label>
+         <input onChange={handleChange} type="text" name="title" value={anime.title} required/><br />
+         <label htmlFor="synopsis">Synopsis</label>
+         <input onChange={handleChange} type="text" name="synopsis" value={anime.synopsis}/><br />
+         <label htmlFor="release_year">Release Year</label>
+         <input onChange={handleChange} type="text" name="release_year" value={anime.year_founded}/><br />
+         <label htmlFor="total_seasons">Total Seasons</label>
+         <input onChange={handleChange} type="text" name="total_seasons" value={anime.total_seasons}/><br />
+         <label htmlFor="image_url">Image Url</label>
+         <input onChange={handleChange} type="text" name="image_url" value={anime.image_url}/><br />
+         <label htmlFor="studio">Studio </label>
+         <select
+          // name = "studio_id"
+          onChange={handleChange}
+          type="text"
+          
+          
+          >
+          {StudiosMap}
+         </select>
+         <input type="submit"  value="Create Anime" />
+      </form>
+
+    </>
   )
 }
 
