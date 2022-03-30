@@ -13,9 +13,14 @@ const AnimesContainer = () => {
   useEffect(() => {
       fetchData()
   }, [])
+
+  const handleDeleteAnime = (id) => {
+    const updatedAnimes = animes.filter((anime) => anime.id !== id);
+    setAnimes(updatedAnimes);
+  }
   return (
     <div>
-      <AnimeList animes={animes}/>
+      <AnimeList animes={animes} handleDelteAnime={handleDeleteAnime}/>
     </div>
   )
 }

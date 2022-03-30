@@ -1,9 +1,9 @@
 import React from 'react'
 import AnimeCard from './AnimeCard'
 
-const AnimeList = ({animes}) => {
+const AnimeList = ({animes , handleDeleteAnime }) => {
   const AnimesCard = animes.map(anime => {
-    return <AnimeCard key={anime.id} anime={anime} />
+    return <AnimeCard key={anime.id} anime={anime} handleDeleteAnime={handleDeleteAnime}/>
 })
   return (
     <div>
