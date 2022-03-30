@@ -1,3 +1,18 @@
+# Anime Project app, frontend   
+
+## Description
+
+This project is structured around the concept an anime belonging to a studio. The frontend is created with React while the backend is created with Sinatra and Active Record. The goal was to create a web basic API with Sinatra and Active Record to support a React frontend. In the backend, We had to create a database with a one-to-many relationship. In this case, a studio has many animes, and an anime belongs to a singular studio. We also had to establish 3 CRUD actions that would work from the front-end communicating with backend API routes in Sinatra.
+
+The github for the backend can be found here:
+https://github.com/Vshan0816/Project3Backend
+
+## Installation
+
+1. Fork and clone the repository
+2. Cd into the project and run npm install
+3. Run the backend server 
+4. Run the React server with: npm start
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +83,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
