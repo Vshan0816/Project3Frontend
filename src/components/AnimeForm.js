@@ -20,7 +20,7 @@ const AnimeForm = () => {
     release_year: "",
     total_seasons: "",
     image_url: "",
-    studio: ""
+    studio: "Ufotable"
 });
 const history = useHistory()
 
@@ -53,7 +53,7 @@ fetch("http://localhost:9393/animes", {
 }
 
 const StudiosMap = studios.map(studio => {
-  return <option value={anime.studio} name = "studio">{studio.name}</option>
+  return <option value={studio.name} name = "studio">{studio.name}</option>
 }) 
 
   return (
@@ -72,7 +72,8 @@ const StudiosMap = studios.map(studio => {
          <input onChange={handleChange} type="text" name="image_url" value={anime.image_url}/><br />
          <label htmlFor="studio">Studio </label>
          <select
-          // name = "studio_id"
+          name = "studio"
+          value = {anime.studio}
           onChange={handleChange}
           type="text"
           
